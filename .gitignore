@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+data/
+index/
+outputs/
+ckpt/
+*.pt
+*.bin
+*.safetensors
+__pycache__/
+.ipynb_checkpoints/
