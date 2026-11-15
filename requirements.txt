@@ -1,0 +1,15 @@
+# EvidenceGuard requirements.
+# The core code (data loading, BM25 retrieval, baseline, metrics, golden-set tools, tests)
+# uses only the Python standard library (Python 3.10 or newer). The packages below are
+# only for downloading data and for the optional embedding rerank.
+
+# Downloading the AVeriTeC knowledge store and other Hugging Face files
+huggingface_hub
+
+# Optional: embedding rerank in the baseline (pulls in PyTorch, which is a large download).
+# Without it the baseline falls back to BM25 only.
+sentence-transformers
+numpy
+
+# Not a pip package: install Ollama from https://ollama.com, then run
+#   ollama pull qwen2.5:3b-instruct

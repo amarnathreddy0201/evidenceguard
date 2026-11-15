@@ -2,7 +2,12 @@
 name = "evidenceguard"
 version = "0.1.0"
 requires-python = ">=3.10"
-dependencies = ["numpy", "rank_bm25", "scikit-learn", "pandas"]
+# The core code uses only the standard library.
+dependencies = []
+
+[project.optional-dependencies]
+data = ["huggingface_hub"]
+embed = ["sentence-transformers", "numpy"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
